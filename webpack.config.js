@@ -4,7 +4,9 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/js/index.js',
-        forceHome: './src/js/force-home.js'
+        forceHome: './src/js/force-home.js',
+        contactController: './src/js/controllers/contactController.js',
+        sweetalert: './src/js/lib/sweetalert.min.js'
         /**
          * Registre aqui um JS para importar em 'chunks' no HtmlWebpackPlugin
          * 
@@ -25,7 +27,13 @@ module.exports = {
             inject: true,
             chunks: ['index'],
             filename: 'home.html'
-        })
+        }),
+        new HtmlWebpackPlugin({
+          template: './src/pages/contact.html',
+          inject: true,
+          chunks: ['index', 'sweetalert', 'contactController'],
+          filename: 'contact.html'
+      })
         /**
          * Para adicionar mais páginas, basta copiar a declaração do HtmlWebpackPlugin acima,
          * alterar o template e o filename.
