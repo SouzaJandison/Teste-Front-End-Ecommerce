@@ -1,3 +1,5 @@
+import '../lib/sweetalert.min.js'
+
 const $form = document.querySelector('#form');
 const $userName = document.querySelector('#userName');
 const $userEmail = document.querySelector('#userEmail');

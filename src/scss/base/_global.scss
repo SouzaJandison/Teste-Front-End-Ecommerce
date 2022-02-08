@@ -22,14 +22,21 @@
 }
 
 body {
+  font-family: "sansation", sans-serif;
   background: var(--gray-50);
 }
 
 input, textarea, button {
-  font: 400 18px "sansation", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .headerContainer {
+  background: var(--white);
+  padding: 2rem 0;
+}
+
+.footerContainer {
   background: var(--white);
   padding: 2rem 0;
 }
@@ -38,4 +45,14 @@ input, textarea, button {
   max-width: 1124px;
   margin: auto;
   padding: 0 1rem;
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 0;
+  }  
+
+  .headerContainer {
+    padding: 2rem 0.5rem;
+  }
 }

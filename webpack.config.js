@@ -5,6 +5,7 @@ module.exports = {
     entry: {
         index: './src/js/index.js',
         forceHome: './src/js/force-home.js',
+        homeController: './src/js/controllers/homeController.js',
         contactController: './src/js/controllers/contactController.js',
         sweetalert: './src/js/lib/sweetalert.min.js'
         /**
@@ -25,15 +26,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/pages/home.html',
             inject: true,
-            chunks: ['index'],
+            chunks: ['index', 'homeController'],
             filename: 'home.html'
         }),
         new HtmlWebpackPlugin({
           template: './src/pages/contact.html',
           inject: true,
-          chunks: ['index', 'sweetalert', 'contactController'],
+          chunks: ['index', 'contactController'],
           filename: 'contact.html'
-      })
+        })
         /**
          * Para adicionar mais páginas, basta copiar a declaração do HtmlWebpackPlugin acima,
          * alterar o template e o filename.
