@@ -1,3 +1,6 @@
+import Swiper, { Navigation } from 'swiper';
+import 'swiper/css'
+
 import '../lib/fontawesome-all.min.js'
 
 const handlePosition = document.querySelectorAll('#handle-position');
@@ -65,3 +68,29 @@ function sizeOptionsRemoveActive() {
     }
   });
 }
+
+const swiper = new Swiper(".mySwiper", {
+  modules: [Navigation],
+  slidesPerView: 5,
+  slidesPerGroup: 1,
+  spaceBetween: 16,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-btn-next",
+    prevEl: ".swiper-btn-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1
+    },
+    499: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 3
+    },
+    992: {
+      slidesPerView: 5
+    }
+  }
+});

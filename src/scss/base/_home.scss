@@ -267,7 +267,7 @@ header {
 
 .description {
   margin-top: 1.5rem;
-  padding: 2rem 1.5rem 0;
+  padding: 2rem 1.5rem;
   background-color: var(--white);
 
   .description-text {
@@ -279,11 +279,11 @@ header {
     &.close {
       opacity: 0;
       height: 0;
-      padding-bottom: 0;
+      padding: 0;
       transition: opacity 1s ease-out;
     }
 
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 0;
     font-size: 1rem;
     line-height: 1.2rem;
     color: var(--gray-500);
@@ -304,7 +304,7 @@ header {
 
 .comments {
   margin-top: 1.5rem;
-  padding: 2rem 1.5rem 0;
+  padding: 2rem 1.5rem;
   background-color: var(--white);
 
   .comments-text {
@@ -316,11 +316,11 @@ header {
     &.close {
       opacity: 0;
       height: 0;
-      padding-bottom: 0;
+      padding: 0;
       transition: opacity 1s ease-out;
     }
 
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 0;
     font-size: 1rem;
     line-height: 1.2rem;
     color: var(--gray-500);
@@ -331,7 +331,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
 
   .title {
     display: flex;
@@ -364,8 +363,7 @@ header {
 
 .associated {
   margin: 1.5rem 0;
-  padding: 2rem 1.5rem;
-  background-color: var(--white);
+  padding: 2rem 1rem;
 
   .slide-info {
     display: flex;
@@ -386,6 +384,37 @@ header {
 
         &:last-child {
           margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .slide-associated {
+    margin-top: 1rem;
+
+    .items {
+      .item {
+        background-color: var(--white);
+        padding: 1rem 0.5rem;
+
+        img {
+          width: 100%;
+        }
+
+        a {
+          font-size: 1rem;
+          line-height: 1.2rem;
+          font-weight: 600;
+          text-decoration: none;
+          color: var(--gray-500);
+        }
+
+        .price {
+          display: block;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--gray-800);
+          padding-top: 0.5rem;
         }
       }
     }
@@ -413,10 +442,10 @@ button {
     padding: 2rem 0.5rem;
   }  
   .description {
-    padding: 2rem 1.5rem 0;
+    padding: 2rem 1.5rem;
   }  
   .comments {
-    padding: 2rem 1.5rem 0;
+    padding: 2rem 1.5rem;
   }  
   .associated {
     padding: 2rem 0.5rem;

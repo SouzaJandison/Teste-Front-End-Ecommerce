@@ -6,8 +6,7 @@ module.exports = {
         index: './src/js/index.js',
         forceHome: './src/js/force-home.js',
         homeController: './src/js/controllers/homeController.js',
-        contactController: './src/js/controllers/contactController.js',
-        sweetalert: './src/js/lib/sweetalert.min.js'
+        contactController: './src/js/controllers/contactController.js'
         /**
          * Registre aqui um JS para importar em 'chunks' no HtmlWebpackPlugin
          * 
