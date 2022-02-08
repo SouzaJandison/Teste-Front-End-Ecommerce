@@ -37,8 +37,7 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 1rem;
+    margin: 1rem;
 
     .images-slide {
       .slide-show-box {
@@ -450,4 +449,13 @@ button {
   .associated {
     padding: 2rem 0.5rem;
   }  
+}
+
+@media (max-width: 991px) {
+  .product {
+    .info {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
